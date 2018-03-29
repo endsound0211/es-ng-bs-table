@@ -1,6 +1,20 @@
 {
   "name": "es-ng-bs-table",
-  "version": "0.0.23",
+  "version": "0.0.25",
+  "description": "angular boostrap table",
+  "keywords": [
+    "angular table", "angular4 table", "angular5 table",
+    "ng table", "ng4 table", "ng5 table",
+    "ng bs table"
+  ],
+  "author": "EndSound",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/endsound0211/es-ng-bs-table.git"
+  },
+  "bugs": {
+    "url": "https://github.com/endsound0211/es-ng-bs-table/issues"
+  },
   "license": "MIT",
   "private": false,
   "module": "dist/bundles/index.js",
