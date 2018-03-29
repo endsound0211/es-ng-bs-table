@@ -7,7 +7,7 @@
 * flexible header and cell template
 * support client and server pagination
 * keep search result on url
-* easy to ********extend tool
+* easy to extend tool
 
 under construction...
 
