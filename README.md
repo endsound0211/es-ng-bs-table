@@ -18,6 +18,7 @@ under construction...
     * [Basic Usage](#basic-usage)
     * [General Search](#general-search)
     * [Formatter and Text Template](#formatter-and-text-template)
+    * [Keep](#keep)
 * [Variable](#variable)
 * [Method](#method)
 * [Input](#input)
@@ -179,7 +180,19 @@ html:
       </ng-template>
     </es-ng-table-col>
     <es-ng-table-col title="Description" field="description" [formatter]="formatter"></es-ng-table-col>
-  </es-ng-table>
+</es-ng-table>
+````
+
+### Keep
+
+IMPORTANT: NEED IMPORT "RouterModule". ONLY ONE KEEP IN ONE PAGE.
+
+you will see url change after any params changes(like: page, size, search...)
+
+html:
+
+````angular2html
+<es-ng-table [data]="data" [keep]="true"></es-ng-table>
 ````
 
 ## Variable
