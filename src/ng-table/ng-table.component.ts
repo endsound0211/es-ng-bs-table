@@ -243,7 +243,7 @@ export class NgTableComponent implements OnInit, AfterViewInit,  OnDestroy, OnCh
 
   keepConfigure(){
     if(isNullOrUndefined(this.route) || isNullOrUndefined(this.router))
-      throw new ReferenceError("Import RoutingModule to your module");
+      throw new ReferenceError("Import RoutingModule to your mo");
 
     let queryParams =  JSON.parse(JSON.stringify(this.route.snapshot.queryParams));
     if('sort' in queryParams) this.sort = queryParams['sort'];

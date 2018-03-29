@@ -54,16 +54,77 @@ under construction...
 
 ## Variable
 
-under construction...
+### NgTableComponent & NgSdTableComponent
+
+| Name     | Type         | Default | Description |
+|----------|--------------|---------|-------------|
+| `data`   | Array<any>   |         | data of rows.
+| `rows`   | Array<any>   | []      | current data of rows.
+| `total`  | number       |         | size of total data.
+| `page`   | number       | 1       | current page.
+| `size`   | number       | 10      | size in a page.
+| `search` | string       |         | search text, used in general search.
+| `query`  | string       |         | query json, user in advanced search.
+| `sort`   | string       |         | sort by field.
+| `order`  | 'asc' 'desc' | 'asc'   | order.
+| `url`    | string       |         | get json from url.
+| `keep`   | boolean      | false   | keep search result.
+
+### NgTableColComponent
+
+| Name       | Type    | Default | Description |
+|------------|---------|---------|-------------|
+| `title`    | string  |         | th text.
+| `field`    | string  |         | field name in row.
+| `checkbox` | boolean | false   | is checkbox cell?
+| `radio`    | boolean | false   | is radio cell?
 
 ## Method
 
-under construction...
+### NgTableComponent & NgSdTableComponent
+
+| Name             | Param          | Return     | Description |
+|------------------|----------------|------------|-------------|
+| `refresh`        |                | void       | refresh rows.
+| `generalSearch`  | (term: string) | void       | general search.
+| `advancedSearch` | (query: any)   | void       | advance search.
+| `getSelections`  |                | Array<any> | get selected rows.
 
 ## Input
 
-under construction...
+### NgTableComponent & NgSdTableComponent
+
+| Name              | Type         | Default | Description |
+|-------------------|--------------|---------|-------------|
+| `data`            | Array<any>   |         | data of rows.
+| `url`             | string       |         | get json from url.
+| `sort`            | string       |         | sort by field.
+| `order`           | 'asc' 'desc' | 'asc'   | order.
+| `keep`            | boolean      | false   | keep search result.
+| `queryFun`        | Function     |         | (client pagination) advanced search. (row: any, index: number, query: any) => Array<any>
+| `responseHandler` | Function     |         | handler after get data from url. (data: any) => any
+
+
+### NgTableColComponent
+
+| Name        | Type     | Default | Description |
+|-------------|----------|---------|-------------|
+| `title`     | string   |         | th text.
+| `field`     | string   |         | field name in row.
+| `checkbox`  | boolean  | false   | is checkbox cell?
+| `radio`     | boolean  | false   | is radio cell?
+| `formatter` | Function |         | formatter cell. (value: any) => string
 
 ## Output
 
-under construction...
+### NgTableComponent & NgSdTableComponent
+
+| Name       | Type | Description |
+|------------|------|-------------|
+| onRowClick | any  | fired when row be clicked.
+
+### NgTableColComponent
+
+| Name        | Type | Description |
+|-------------|------|-------------|
+| onCellClick | any  | fired when cell be clicked.
