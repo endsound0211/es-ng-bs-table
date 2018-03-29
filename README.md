@@ -33,7 +33,8 @@ Then import bootstrap 4 css in .angular-cli.json
 {
   "apps": {
      "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/open-iconic/font/css/open-iconic-bootstrap.css"
      ]
   }
 }
@@ -92,7 +93,7 @@ export class AppComponent {
     {id: 8, name: "Dominic Lynch", score: 80, description: "d8"},
     {id: 9, name: "Alberto Walls", score: 80, description: "d9"},
     {id: 10, name: "Jerry Pate", score: 80, description: "d10"},
-    {id: 11, name: "Spencer Gordon", score: 80, description: "d11"},
+    {id: 11, name: "Spencer Gordon", score: 79, description: "d11"},
   ]
 }
 ````
