@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+	"rootDir": "./src",
+    "outDir": "./src",
+	"baseUrl": ".",
+	"module": "es2015",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+	"declaration": true,
+	"declarationDir": "./dist/bundles"
+  },
+  "files": [
+	"./src/index.ts"
+  ],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+	"enableResourceInlining": true
+  }
+}

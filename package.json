@@ -1,0 +1,37 @@
+{
+  "name": "es-ng-bs-table",
+  "version": "0.0.23",
+  "license": "MIT",
+  "private": false,
+  "module": "dist/bundles/index.js",
+  "types": "dist/bundles/index.d.ts",
+  "main": "dist/bundles/ng.table.min.js",
+  "scripts": {
+    "transpile": "ngc",
+    "package": "rollup -c",
+    "minify": "uglifyjs dist/bundles/es-ng-bs-table.js --screw-ie8 --compress --mangle --comments --output dist/bundles/es-ng-bs-table.min.js",
+    "build": "npm run transpile && npm run package && npm run minify && node ./resource/copy-resource.js"
+  },
+  "dependencies": {
+    "@angular/common": "^5.1.0",
+    "@angular/compiler": "^5.1.0",
+    "@angular/core": "^5.1.0",
+    "@angular/forms": "^5.1.0",
+    "@angular/http": "^5.1.0",
+    "@angular/router": "^5.1.0",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.4",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "linq": "^3.0.9",
+    "rxjs": "^5.5.6"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.7.3",
+    "@angular/compiler-cli": "^5.1.0",
+    "copy-dir": "^0.3.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-angular-inline": "^1.0.1",
+    "ts-node": "~3.2.0",
+    "typescript": "~2.5.3"
+  }
+}

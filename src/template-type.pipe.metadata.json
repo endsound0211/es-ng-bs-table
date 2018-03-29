@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"TD_TEMPLATE":{"TEXT":0,"CHECKBOX":1,"RADIO":2},"TemplateTypePipe":{"__symbolic":"class","decorators":[{"__symbolic":"call","expression":{"__symbolic":"reference","module":"@angular/core","name":"Pipe","line":7,"character":1},"arguments":[{"name":"templateType"}]}],"members":{"transform":[{"__symbolic":"method"}]}}}}]
