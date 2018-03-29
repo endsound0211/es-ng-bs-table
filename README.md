@@ -1,7 +1,7 @@
-# ES Angular Boostrap Table
+# ES Angular bootstrap Table
 
 ## Features
-* create for boostrap 4
+* create for bootstrap 4
 * card view in mobile
 * get json data from server
 * flexible header and cell template
@@ -15,6 +15,7 @@ under construction...
 
 * [Setup](#setup)
 * [Usage](#usage)
+    * [Basic Usage](#basic usage)
 * [Variable](#variable)
 * [Method](#method)
 * [Input](#input)
@@ -27,7 +28,18 @@ First you need to install the npm module
 npm install es-ng-bs-table
 ````
 
-Then import the 'HttpClientModule' and 'BsTableModule' to module
+Then import bootstrap 4 css in .angular-cli.json
+````json
+{
+  "apps": {
+     "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
+     ]
+  }
+}
+````
+
+Last import the 'HttpClientModule' and 'BsTableModule' to module
 ````typescript
 import {NgModule} from "@angular/core"
 import {HttpClientModule} from "@angular/common/http";
@@ -51,7 +63,54 @@ export class AppModule{}
 
 ## Usage
 
-under construction...
+client side pagination
+
+````angular2html
+<es-ng-table></es-ng-table>
+````
+
+server side pagination
+
+````angular2html
+<es-ng-sd-table></es-ng-sd-table>
+````
+
+### Basic Usage
+
+ts:
+
+````typescript
+export class AppComponent {
+  data = [
+    {id: 1, name: "Sean Johnston", score: 99, description: "d1"},
+    {id: 2, name: "Morgan Davies", score: 80, description: "d2"},
+    {id: 3, name: "Morgan John", score: 80, description: "d3"},
+    {id: 4, name: "Tommy Walker", score: 80, description: "d4"},
+    {id: 5, name: "William Lee", score: 80, description: "d5"},
+    {id: 6, name: "Russell Brady", score: 80, description: "d6"},
+    {id: 7, name: "Isaiah Ferguson", score: 80, description: "d7"},
+    {id: 8, name: "Dominic Lynch", score: 80, description: "d8"},
+    {id: 9, name: "Alberto Walls", score: 80, description: "d9"},
+    {id: 10, name: "Jerry Pate", score: 80, description: "d10"},
+    {id: 11, name: "Spencer Gordon", score: 80, description: "d11"},
+  ]
+}
+````
+
+html:
+
+````angular2html
+<div class="container-fluid">
+  <h1>Basic Use</h1>
+  <es-ng-table [data]="data">
+    <es-ng-table-col title="ID" field="id"></es-ng-table-col>
+    <es-ng-table-col title="Name" field="name"></es-ng-table-col>
+    <es-ng-table-col title="Score" field="score"></es-ng-table-col>
+    <es-ng-table-col title="Description" field="description"></es-ng-table-col>
+  </es-ng-table>
+</div>
+````
+
 
 ## Variable
 
