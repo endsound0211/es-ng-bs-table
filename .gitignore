@@ -9,5 +9,8 @@
 /src/*/*.js
 /src/*/*.js.map
 /src/*/*.metadata.json
+/src/*/*.ngfactory.js
 /src/*/*.ngfactory.js.map
 /src/*/*.ngsummary.json
+/src/*/*.shim.ngstyle.js
+/src/*/*.shim.ngstyle.js.map
