@@ -196,7 +196,7 @@ html:
 
 ### Fetch Data From API
 
-ts:
+html:
 ````angular2html
 <es-ng-table url="http://domain/path">
    <es-ng-table-col field="state" [checkbox]="true"></es-ng-table-col>
@@ -281,4 +281,4 @@ ts:
 
 | Name         | Type | Description |
 |--------------|------|-------------|
-| `nCellClick` | any  | fired when cell be clicked.
+| `onCellClick` | any  | fired when cell be clicked.
