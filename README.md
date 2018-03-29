@@ -16,7 +16,7 @@ under construction...
 * [Setup](#setup)
 * [Usage](#usage)
 * [Variable](#variable)
-* [Method](#metod)
+* [Method](#method)
 * [Input](#input)
 * [Output](#output)
 
