@@ -9,8 +9,6 @@
 * keep search result on url
 * easy to extend tool
 
-under construction...
-
 ## Table of contents
 
 * [Setup](#setup)
@@ -19,6 +17,7 @@ under construction...
     * [General Search](#general-search)
     * [Formatter and Text Template](#formatter-and-text-template)
     * [Keep](#keep)
+    * [Fetch Data From API](#fetch-data-from-api)
 * [Variable](#variable)
 * [Method](#method)
 * [Input](#input)
@@ -185,7 +184,7 @@ html:
 
 ### Keep
 
-IMPORTANT: NEED IMPORT "RouterModule". ONLY ONE KEEP IN ONE PAGE.
+**IMPORTANT: NEED IMPORT "RouterModule". ONLY ONE KEEP IN ONE PAGE.**
 
 you will see url change after any params changes(like: page, size, search...)
 
@@ -194,6 +193,18 @@ html:
 ````angular2html
 <es-ng-table [data]="data" [keep]="true"></es-ng-table>
 ````
+
+### Fetch Data From API
+
+ts:
+````angular2html
+<es-ng-table url="http://domain/path">
+   <es-ng-table-col field="state" [checkbox]="true"></es-ng-table-col>
+   <es-ng-table-col title="ID" field="id"></es-ng-table-col>
+   <es-ng-table-col title="Name" field="name"></es-ng-table-col>
+</es-ng-table>
+````
+
 
 ## Variable
 
