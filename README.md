@@ -15,7 +15,7 @@ under construction...
 
 * [Setup](#setup)
 * [Usage](#usage)
-    * [Basic Usage](#basic usage)
+    * [Basic Usage](#basic-usage)
 * [Variable](#variable)
 * [Method](#method)
 * [Input](#input)
