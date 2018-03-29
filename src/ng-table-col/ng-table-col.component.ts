@@ -26,7 +26,7 @@ export class NgTableColComponent implements OnInit {
   @ViewChild('editTemplate')  defaultEditTemplate: TemplateRef<any>;
   @ContentChild('editTemplate')editTemplate: TemplateRef<any>;
 
-  @Output()cellClick = new EventEmitter<any>();
+  @Output() onCellClick = new EventEmitter<any>();
 
   constructor() { }
 

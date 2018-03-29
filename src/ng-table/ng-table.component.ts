@@ -1,7 +1,7 @@
 import {
-  AfterViewInit,
-  Component, ContentChildren, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, QueryList,
-  SimpleChanges
+    AfterViewInit,
+    Component, ContentChildren, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Optional, Output, QueryList,
+    SimpleChanges
 } from '@angular/core';
 import {NgTableColComponent} from "../ng-table-col/ng-table-col.component";
 import {from} from "linq/linq";
@@ -108,7 +108,7 @@ export class NgTableComponent implements OnInit, AfterViewInit,  OnDestroy, OnCh
   isLoading: boolean = false;
 
   //event
-  @Output() rowClick = new EventEmitter<any>();
+  @Output() onRowClick = new EventEmitter<any>();
 
   //handler
   @Input() responseHandler = (data: any): any => {
@@ -117,8 +117,8 @@ export class NgTableComponent implements OnInit, AfterViewInit,  OnDestroy, OnCh
 
   constructor(
     protected http: HttpClient,
-    protected router: Router,
-    protected route: ActivatedRoute
+    @Optional() protected router: Router,
+    @Optional() protected route: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -242,6 +242,9 @@ export class NgTableComponent implements OnInit, AfterViewInit,  OnDestroy, OnCh
   }
 
   keepConfigure(){
+    if(isNullOrUndefined(this.route) || isNullOrUndefined(this.router))
+      throw new ReferenceError("Import RoutingModule to your module");
+
     let queryParams =  JSON.parse(JSON.stringify(this.route.snapshot.queryParams));
     if('sort' in queryParams) this.sort = queryParams['sort'];
     if('search' in queryParams) this.search = queryParams['search'];

@@ -28,8 +28,8 @@
     </thead>
     <tbody>
     <ng-container *ngIf="!isLoading; else loading;">
-      <tr *ngFor="let row of rows;index as i" (click)="rowClick.emit(row)">
-        <td *ngFor="let col of cols.toArray()" (click)="col.cellClick.emit(row)" [attr.data-title]="col.title">
+      <tr *ngFor="let row of rows;index as i" (click)="onRowClick.emit(row)">
+        <td *ngFor="let col of cols.toArray()" (click)="col.onCellClick.emit(row)" [attr.data-title]="col.title">
           <ng-container [ngSwitch]="col | templateType">
             <ng-container *ngSwitchCase="TD_TEMPLATE.CHECKBOX">
               <input type="checkbox" value="true" name="checkbox{{i}}" [(ngModel)]="row[col.field]">
