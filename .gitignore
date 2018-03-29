@@ -5,3 +5,9 @@
 
 # dependencies
 /node_modules
+
+/src/**/*.js
+/src/**/*.js.map
+/src/**/*.metadata.json
+/src/**/*.ngfactory.js.map
+/src/**/*.ngsummary.json
