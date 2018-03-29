@@ -2,11 +2,12 @@
 
 ## Features
 * create for boostrap 4
+* card view in mobile
 * get json data from server
 * flexible header and cell template
 * support client and server pagination
 * keep search result on url
-* easy extend tool to add toolbar
+* easy to ********extend tool
 
 under construction...
 
@@ -119,12 +120,12 @@ under construction...
 
 ### NgTableComponent & NgSdTableComponent
 
-| Name       | Type | Description |
-|------------|------|-------------|
-| onRowClick | any  | fired when row be clicked.
+| Name         | Type | Description |
+|--------------|------|-------------|
+| `onRowClick` | any  | fired when row be clicked.
 
 ### NgTableColComponent
 
-| Name        | Type | Description |
-|-------------|------|-------------|
-| onCellClick | any  | fired when cell be clicked.
+| Name         | Type | Description |
+|--------------|------|-------------|
+| `nCellClick` | any  | fired when cell be clicked.
