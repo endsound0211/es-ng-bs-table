@@ -17,6 +17,7 @@ under construction...
 * [Usage](#usage)
     * [Basic Usage](#basic-usage)
     * [General Search](#general-search)
+    * [Formatter and Text Template](#formatter-and-text-template)
 * [Variable](#variable)
 * [Method](#method)
 * [Input](#input)
@@ -85,8 +86,25 @@ server side pagination
 server side pagination structure
 
 ````typescript
-{rows: Array<any>, total: number}
+{
+    rows: Array<any>;
+    total: number;
+}
 ````
+
+server side params
+
+````typescript
+{
+    limit: number;
+    offset: number;
+    sort: string;
+    order: string;
+    search: string;
+    query: string; //json
+}
+````
+
 
 ### Basic Usage
 
@@ -134,11 +152,33 @@ html:
     <es-ng-table-tool-bar>
       <es-ng-table-general-search></es-ng-table-general-search>
     </es-ng-table-tool-bar>
-    <es-ng-table-col field="state" [checkbox]="true"></es-ng-table-col>
-    <es-ng-table-col title="ID" field="id"></es-ng-table-col>
     <es-ng-table-col title="Name" field="name"></es-ng-table-col>
-    <es-ng-table-col title="Score" field="score"></es-ng-table-col>
-    <es-ng-table-col title="Description" field="description"></es-ng-table-col>
+</es-ng-table>
+````
+
+### Formatter and Text Template
+
+ts: 
+
+````typescript
+export class AppComponent {
+  formatter = (value: any) => {
+    return value + ' postfix'
+  }
+}
+````
+
+html:
+
+````angular2html
+<es-ng-table [data]="data">
+    <es-ng-table-col title="Name" field="name"></es-ng-table-col>
+    <es-ng-table-col title="Score" field="score">
+      <ng-template #textTemplate let-row="row" let-value="value" let-index="index" let-formatter="formatter">
+        <button>{{value}}</button>
+      </ng-template>
+    </es-ng-table-col>
+    <es-ng-table-col title="Description" field="description" [formatter]="formatter"></es-ng-table-col>
   </es-ng-table>
 ````
 
