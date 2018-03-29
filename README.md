@@ -16,6 +16,7 @@ under construction...
 * [Setup](#setup)
 * [Usage](#usage)
     * [Basic Usage](#basic-usage)
+    * [General Search](#general-search)
 * [Variable](#variable)
 * [Method](#method)
 * [Input](#input)
@@ -70,10 +71,21 @@ client side pagination
 <es-ng-table></es-ng-table>
 ````
 
+client side pagination structure
+````typescript
+Array<any>
+````
+
 server side pagination
 
 ````angular2html
 <es-ng-sd-table></es-ng-sd-table>
+````
+
+server side pagination structure
+
+````typescript
+{rows: Array<any>, total: number}
 ````
 
 ### Basic Usage
@@ -104,6 +116,7 @@ html:
 <div class="container-fluid">
   <h1>Basic Use</h1>
   <es-ng-table [data]="data">
+    <es-ng-table-col field="state" [checkbox]="true"></es-ng-table-col>
     <es-ng-table-col title="ID" field="id"></es-ng-table-col>
     <es-ng-table-col title="Name" field="name"></es-ng-table-col>
     <es-ng-table-col title="Score" field="score"></es-ng-table-col>
@@ -112,6 +125,22 @@ html:
 </div>
 ````
 
+### General Search
+
+html:
+
+````angular2html
+<es-ng-table [data]="data">
+    <es-ng-table-tool-bar>
+      <es-ng-table-general-search></es-ng-table-general-search>
+    </es-ng-table-tool-bar>
+    <es-ng-table-col field="state" [checkbox]="true"></es-ng-table-col>
+    <es-ng-table-col title="ID" field="id"></es-ng-table-col>
+    <es-ng-table-col title="Name" field="name"></es-ng-table-col>
+    <es-ng-table-col title="Score" field="score"></es-ng-table-col>
+    <es-ng-table-col title="Description" field="description"></es-ng-table-col>
+  </es-ng-table>
+````
 
 ## Variable
 
